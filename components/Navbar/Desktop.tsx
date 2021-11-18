@@ -53,7 +53,8 @@ const Nav: FC = () => {
                   rel="noreferrer"
                   {...(router.pathname === item.path
                     ? {
-                        color: 'brand.purple.200'
+                        color: 'brand.purple.200',
+                        fontWeight: 700
                       }
                     : '')}
                 >

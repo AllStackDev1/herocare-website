@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export -o dist && cp dist/index.html dist/200.html",
+    "deploy:surge": "npm run export && surge --domain `cat CNAME` dist",
     "start": "next start",
     "lint": "next lint"
   },
