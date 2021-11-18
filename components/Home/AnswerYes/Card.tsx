@@ -7,7 +7,24 @@ interface IProps {
   color: string
 }
 
+interface IStyle {
+  h: number
+  w: number
+  pos: 'absolute'
+  bgColor: string
+  borderTopLeftRadius: string
+  borderBottomRightRadius: string
+}
+
 const Card: FC<IProps> = ({ title, text, color }) => {
+  const styles: IStyle = {
+    h: 6,
+    w: 12,
+    pos: 'absolute',
+    bgColor: color,
+    borderTopLeftRadius: 'xl',
+    borderBottomRightRadius: 'xl'
+  }
   return (
     <GridItem
       px={5}
@@ -19,16 +36,7 @@ const Card: FC<IProps> = ({ title, text, color }) => {
       textAlign="left"
       border={`1px solid ${color}`}
     >
-      <Box
-        h={6}
-        w={12}
-        top={0}
-        left={0}
-        pos="absolute"
-        bgColor={color}
-        borderTopLeftRadius="xl"
-        borderBottomRightRadius="xl"
-      />
+      <Box top={0} left={0} {...styles} />
       <Box mt={6}>
         <Heading fontSize="34px" fontWeight={400} lineHeight="36px">
           {title}
@@ -39,16 +47,7 @@ const Card: FC<IProps> = ({ title, text, color }) => {
           {text}
         </Text>
       </Box>
-      <Box
-        h={6}
-        w={12}
-        right={0}
-        bottom={0}
-        pos="absolute"
-        bgColor={color}
-        borderTopLeftRadius="xl"
-        borderBottomRightRadius="xl"
-      />
+      <Box right={0} bottom={0} {...styles} />
     </GridItem>
   )
 }
