@@ -1,182 +1,157 @@
 import { FC } from 'react'
+import NextLink from 'next/link'
 import {
   Box,
   Icon,
+  Link,
   Text,
   Flex,
   Grid,
-  Image,
   Divider,
-  Heading,
-  GridItem
+  GridItem,
+  Container
 } from '@chakra-ui/react'
-import { FaFacebookF, FaTwitter, FaPinterestP } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
+import Menu from './Menu'
 
 const Footer: FC = () => {
+  const menus = [
+    {
+      title: 'Services',
+      links: [
+        {
+          title: 'Overnight care',
+          link: '/#'
+        },
+        {
+          title: 'Flexi care/Hourly care',
+          link: '/#'
+        },
+        {
+          title: 'Video companionship',
+          link: '/#'
+        },
+        {
+          title: '24-hour live in care',
+          link: '/#'
+        },
+        {
+          title: 'Permanent staff',
+          link: '/#'
+        }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        {
+          title: 'Guides',
+          link: '/#'
+        },
+        {
+          title: 'Carer training',
+          link: '/#'
+        },
+        {
+          title: 'Help & support',
+          link: '/#'
+        }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        {
+          title: 'About',
+          link: '/#'
+        },
+        {
+          title: 'Contact',
+          link: '/#'
+        }
+      ]
+    }
+  ]
   return (
-    <Box
-      px={6}
-      py={8}
-      bg={
-        'linear-gradient(to top, rgba(0, 191, 77, 1) 0%, rgba(2, 153, 62, 1) 100%)'
-      }
-    >
-      <Box w={'85%'} mx={'auto'}>
-        <Grid
-          templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(5, 1fr)' }}
-          gap={6}
-          mt={12}
-          mb={12}
-        >
-          <Box
-            as={GridItem}
-            colSpan={2}
-            textAlign={{ base: 'center', lg: 'left' }}
-            mb={12}
-          >
-            <Heading as='h5' fontSize={18} color='black'>
-              FamilyLine
-            </Heading>
-            <Text
-              fontSize={36}
-              lineHeight={1.2}
+    <Box w="full" pb={{ xl: 5 }} pt={{ xl: 20 }} bgColor="brand.purple.700">
+      <Container
+        color="white"
+        textAlign="center"
+        minW={{ lg: '7xl', '4xl': '8xl' }}
+      >
+        <Grid templateColumns={{ lg: '40% 20% 20% 20%' }} columnGap={6} mb={12}>
+          <GridItem textAlign={{ base: 'center', lg: 'left' }}>
+            <NextLink href="/#" passHref>
+              <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
+                <Box
+                  bgImage="url('./images/logo-2.png')"
+                  bgRepeat="no-repeat"
+                  bgSize="contain"
+                  w={40}
+                  h={8}
+                />
+              </Link>
+            </NextLink>
+            <Flex
               mt={4}
-              fontWeight={'bold'}
-              color='black'
+              mb={4}
+              align={{ base: 'center', lg: 'flex-end' }}
+              color="rgba(255, 255, 255, 0.8)"
             >
-              The Evolution of Lineage Tracking
-            </Text>
-          </Box>
-          <Box as={GridItem} colSpan={3}>
-            <Grid
-              templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
-            >
-              <Box as={GridItem} colSpan={1} mb={12}>
-                <Heading as='h5' fontSize={16} color='black'>
-                  Discover the Network
-                </Heading>
-                <Box>
-                  <Text mt={4}>Where to shop</Text>
-                  <Text mt={4}>Tour Guided</Text>
-                  <Text mt={4}>Our tours</Text>
-                  <Text mt={4}>About Us</Text>
-                </Box>
+              <Box w={10} h={10}>
+                <Icon as={FaFacebookF} boxSize={5} />
               </Box>
-              <Box as={GridItem} colSpan={1} mb={12}>
-                <Heading as='h5' fontSize={16} color='black'>
-                  Become a member
-                </Heading>
-                <Box>
-                  <Text mt={4}>Join your Pairing</Text>
-                  <Text mt={4}>Offer your service</Text>
-                  <Text mt={4}>Are you a guide ?</Text>
-                </Box>
+              <Box w={10} h={10}>
+                <Icon as={FaTwitter} boxSize={5} />
               </Box>
-              <Box as={GridItem} colSpan={1} mb={12}>
-                <Heading as='h5' fontSize={16} color='black'>
-                  Assistance
-                </Heading>
-                <Box>
-                  <Text mt={4}>Support center</Text>
-                  <Text mt={4}>FAQs</Text>
-                  <Text mt={4}>Cancellation Options</Text>
-                  <Text mt={4}>Reliability and security</Text>
-                </Box>
+              <Box w={10} h={10}>
+                <Icon as={AiFillInstagram} boxSize={5} />
               </Box>
-            </Grid>
-          </Box>
+              <Box w={10} h={10}>
+                <Icon as={FaYoutube} boxSize={5} />
+              </Box>
+            </Flex>
+          </GridItem>
+
+          {menus.map(e => (
+            <Menu title={e.title} links={e.links} />
+          ))}
         </Grid>
+        <Divider borderColor="white" />
         <Flex
           mt={4}
-          mb={4}
-          direction={'column'}
-          align={{ base: 'center', lg: 'flex-end' }}
-        >
-          <Flex>
-            <Flex
-              w={10}
-              h={10}
-              rounded={'full'}
-              bg={'white'}
-              align='center'
-              justify='center'
-              mr={4}
-            >
-              <Icon as={FaFacebookF} boxSize={5} color=' rgba(0, 191, 77, 1)' />
-            </Flex>
-            <Flex
-              w={10}
-              h={10}
-              rounded={'full'}
-              bg={'white'}
-              align='center'
-              justify='center'
-              mr={4}
-            >
-              <Icon as={FaTwitter} boxSize={5} color=' rgba(0, 191, 77, 1)' />
-            </Flex>
-            <Flex
-              w={10}
-              h={10}
-              rounded={'full'}
-              bg={'white'}
-              align='center'
-              justify='center'
-              mr={4}
-            >
-              <Icon
-                as={AiFillInstagram}
-                boxSize={5}
-                color=' rgba(0, 191, 77, 1)'
-              />
-            </Flex>
-            <Flex
-              w={10}
-              h={10}
-              rounded={'full'}
-              bg={'white'}
-              align='center'
-              justify='center'
-              mr={4}
-            >
-              <Icon
-                as={FaPinterestP}
-                boxSize={5}
-                color=' rgba(0, 191, 77, 1)'
-              />
-            </Flex>
-          </Flex>
-        </Flex>
-        <Divider borderColor='black' />
-        <Flex
-          justifyContent='space-between'
-          align={'center'}
-          mt={4}
+          align="center"
+          color="rgba(255, 255, 255, 0.7)"
+          justifyContent="space-between"
           direction={{ base: 'column-reverse', lg: 'row' }}
         >
-          <Flex align='center' mb={4}>
-            <Image src='/images/logo-white.png' alt='logo-white' boxSize={14} />
-            <Text fontSize={16} fontWeight={'bold'}>
-              FamilyTree. All rights reserved.{' '}
-            </Text>
+          <Flex align="center">
+            <Text fontSize="md">© 2021 Herocare</Text>
           </Flex>
-          <Flex mb={4}>
-            <Text fontWeight='bold' ml={4}>
-              About
-            </Text>
-            <Text fontWeight='bold' ml={4}>
-              Site Map
-            </Text>
-            <Text fontWeight='bold' ml={4}>
-              Terms
-            </Text>
-            <Text fontWeight='bold' ml={4}>
-              Cookie Policy
-            </Text>
+          <Flex w={80} justify="space-around">
+            <NextLink href="/#" passHref>
+              <Link
+                fontSize="md"
+                _focus={{ outline: 'none' }}
+                _hover={{ outline: 'none' }}
+              >
+                Privacy policy
+              </Link>
+            </NextLink>
+
+            <NextLink href="/#" passHref>
+              <Link
+                fontSize="md"
+                _focus={{ outline: 'none' }}
+                _hover={{ outline: 'none' }}
+              >
+                Terms of use
+              </Link>
+            </NextLink>
           </Flex>
         </Flex>
-      </Box>
+      </Container>
     </Box>
   )
 }

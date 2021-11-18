@@ -1,6 +1,8 @@
 import '../styles/globals.css'
+import '../public/fonts/fonts.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -36,16 +38,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             }
           }}
         >
-          <Box
-            fontFamily="Montserrat"
-            pos="relative"
-            h={'100vh'}
-            overflow="hidden"
-          >
+          <Box bgColor="white" pos="relative" overflow="hidden">
             {showNav && (
               <>
                 <DesktopNavbar />
-                <MobileNavbar />
+                {/* <MobileNavbar /> */}
               </>
             )}
 

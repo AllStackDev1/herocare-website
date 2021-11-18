@@ -27,9 +27,11 @@ const Layout: FC<ILayout> = ({
   const main_site_title = 'Hero Care'
 
   let name: string | undefined = router.pathname
-    .split('-')
+    .replace(/\//g, '')
+    .replace('-', ' ')
+    .split(' ')
     .map(e => _.upperFirst(e))
-    .join()
+    .join(' ')
 
   if (router.pathname === '/') {
     name = 'Home'
@@ -62,15 +64,14 @@ const Layout: FC<ILayout> = ({
         }}
       />
       <MotionBox
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { ...transition } }}
-        exit={{ opacity: 0, transition: { ...transition } }}
         as="main"
         role="main"
-        aria-labelledby="main"
-        h="100%"
-        fontFamily="body"
         pos="relative"
+        fontFamily="body"
+        aria-labelledby="main"
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0, transition: { ...transition } }}
+        animate={{ opacity: 1, transition: { ...transition } }}
       >
         {children}
       </MotionBox>

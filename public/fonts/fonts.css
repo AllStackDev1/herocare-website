@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "MartelSans";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MartelSans/MartelSans-ExtraLight.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "MartelSans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MartelSans/MartelSans-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "MartelSans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MartelSans/MartelSans-Regular.ttf") format("opentype");
+}
+
+
+@font-face {
+  font-family: "MartelSans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MartelSans/MartelSans-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "MartelSans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MartelSans/MartelSans-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "MartelSans";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MartelSans/MartelSans-Black.ttf") format("opentype");
+}
+
+
+@font-face {
+  font-family: "HeldaneText";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/HeldaneText/test-heldane-text-medium.woff2") format("opentype");
+}

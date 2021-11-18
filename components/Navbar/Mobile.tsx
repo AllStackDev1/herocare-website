@@ -19,12 +19,12 @@ const active = {
 const MobileNav: FC = () => {
   const router = useRouter()
   return (
-    <Box w='100vw' h='100vh' bg='white' zIndex={5} pos={'relative'} p={8}>
-      <Flex align='center'>
+    <Box w="100vw" h="100vh" bg="white" zIndex={5} pos={'relative'} p={8}>
+      <Flex align="center">
         <Box>
           <Image
             src={'/images/logo.png'}
-            alt='Family Line Logo'
+            alt="Family Line Logo"
             boxSize={20}
             mt={2}
           />
@@ -43,7 +43,7 @@ const MobileNav: FC = () => {
           <Text
             key={item.name}
             mb={6}
-            fontWeight='bold'
+            fontWeight="bold"
             fontSize={20}
             {...(router.pathname === item.path ? active : '')}
           >
@@ -51,11 +51,11 @@ const MobileNav: FC = () => {
           </Text>
         ))}
       </Box>
-      <Divider borderColor='gray.400' />
+      <Divider borderColor="gray.400" />
       <Box mt={6} textAlign={'center'}>
         <Text
           mb={6}
-          fontWeight='bold'
+          fontWeight="bold"
           fontSize={20}
           {...(router.pathname === '/login' ? active : '')}
         >
@@ -63,7 +63,7 @@ const MobileNav: FC = () => {
         </Text>
         <Text
           mb={6}
-          fontWeight='bold'
+          fontWeight="bold"
           fontSize={20}
           {...(router.pathname === '/signup' ? active : '')}
         >

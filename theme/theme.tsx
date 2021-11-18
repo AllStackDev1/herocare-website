@@ -6,7 +6,7 @@ const breakpoints = createBreakpoints({
   md: '48em', // 768
   lg: '62em', // 992
   xl: '80em', // 1280
-  '2xl': '85.375em', // 1366 
+  '2xl': '85.375em', // 1366
   '3xl': '90em', // 1440
   '4xl': '96em', // 1536
   '5xl': '120em' // 1920
@@ -16,7 +16,7 @@ export const theme = extendTheme({
   styles: {
     global: () => ({
       'html, body': {
-        fontFamily: '"CeraPro", sans-serif',
+        fontFamily: '"MartelSans", sans-serif',
         fontWeight: 400
       },
       body: {
@@ -24,14 +24,14 @@ export const theme = extendTheme({
         color: 'gray.700',
         fontSize: 'md',
         fontWeight: 400,
-        bg:'white'
+        bg: 'white'
       }
     })
   },
   breakpoints,
   fonts: {
-    heading: '"CeraPro", sans-serif',
-    body: '"CeraPro", sans-serif'
+    heading: '"HeldaneText", sans-serif',
+    body: '"MartelSans", sans-serif'
   },
   fontSizes: {
     xx: '.55rem',
@@ -40,11 +40,27 @@ export const theme = extendTheme({
     '8xl': '6rem'
   },
   colors: {
-    family: {
-      500: 'rgba(0, 191, 77, 1)'
+    brand: {
+      purple: {
+        200: '#3E49B8',
+        700: '#03072C'
+      },
+      orange: {
+        200: '#FFAC50'
+      },
+      bgColor: {
+        100: 'rgba(250, 238, 213, 0.35)',
+        200: '#EEF8FE',
+        300: '#EC6F2E'
+      }
     },
-    familyBg: {
-      500: 'linear-gradient(to top, rgba(0, 191, 77, 1) 0%, rgba(2, 153, 62, 1) 100%)'
+    brandPurple: {
+      500: '#3E49B8',
+      600: '#3E49B8'
+    },
+    brandOrange: {
+      500: '#FFAC50',
+      600: '#FFAC50'
     }
   },
   space: {
@@ -91,12 +107,16 @@ export const theme = extendTheme({
     109: '28.125rem',
     110: '30rem',
     115: '32rem',
+    116: '34rem',
     120: '35rem',
+    121: '36rem',
     122: '37rem',
     123: '40rem',
     124: '42rem',
     125: '45rem',
+    126: '47rem',
     127: '48rem',
+    128: '49rem',
     129: '50rem',
     130: '55rem',
     135: '60rem',
