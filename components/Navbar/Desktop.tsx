@@ -5,10 +5,11 @@ import { Box, Container, Flex, Button, Link } from '@chakra-ui/react'
 
 const links = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Provider', path: '/provider' },
-  { name: 'Professionals', path: '/professionals' },
-  { name: 'Services', path: '/services' }
+  { name: 'How it works ', path: '/how-it-works ' },
+  { name: 'About', path: '/about' }
+  // { name: 'Provider', path: '/provider' },
+  // { name: 'Professionals', path: '/professionals' },
+  // { name: 'Services', path: '/services' }
 ]
 
 const Nav: FC = () => {
@@ -88,7 +89,7 @@ const Nav: FC = () => {
           </Link>
           <Box mx={4} />
           <Link
-            href="/get-started"
+            href="/sign-up"
             _hover={{ hover: 'none' }}
             _focus={{ outline: 'none' }}
             rel="noreferrer"
@@ -104,7 +105,7 @@ const Nav: FC = () => {
               colorScheme="brandPurple"
               fontSize={{ base: 'sm', xl: 'sm' }}
             >
-              Get Started
+              Sign Up
             </Button>
           </Link>
         </Flex>

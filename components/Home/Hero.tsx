@@ -13,18 +13,16 @@ const Hero: FC = () => {
         <Box w={{ '2xl': 122 }}>
           <Heading
             fontWeight={400}
-            fontSize={{ '2xl': '72px' }}
+            fontSize={{ '2xl': '70px' }}
             lineHeight={{ '2xl': '120%' }}
             mb={{ '2xl': 6 }}
           >
-            Career and Nurse recruitment at the click of a button
+            Fill your healthcare vacancies at a click of a button
           </Heading>
 
           <Text fontSize={{ '2xl': 'xl' }} lineHeight={{ '2xl': '160%' }}>
-            Access the uk's first live database of healthcare staff and hire
-            them straight from our end-to- end platform. Sign up below to get
-            early privileges and updates on the release of our product in q1
-            2022.
+            UK's first live database of Carers and Nurses. Recruit your
+            permanent and temporary staff from our easy to use platform.
           </Text>
         </Box>
 

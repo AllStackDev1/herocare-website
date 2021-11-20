@@ -33,7 +33,7 @@ const Hire: FC = () => {
       </Box>
       <Grid gap={10} templateColumns={{ xl: 'repeat(1, 1fr)' }}>
         {steps.map((e, i) => (
-          <Step title={e.title} text={e.text} pos={i % 2} />
+          <Step key={i} title={e.title} text={e.text} pos={i % 2} />
         ))}
       </Grid>
     </Flex>

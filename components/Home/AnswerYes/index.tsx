@@ -52,8 +52,8 @@ const AnswerYes: FC = () => {
       />
       <Container mt={{ lg: 16 }} minW={{ lg: '3xl' }}>
         <Grid gap={10} templateColumns={{ xl: 'repeat(2, 1fr)' }}>
-          {answers.map(e => (
-            <Card title={e.title} text={e.text} color={e.color} />
+          {answers.map((e, i) => (
+            <Card key={i} title={e.title} text={e.text} color={e.color} />
           ))}
         </Grid>
       </Container>

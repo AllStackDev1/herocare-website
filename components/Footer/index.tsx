@@ -114,8 +114,8 @@ const Footer: FC = () => {
             </Flex>
           </GridItem>
 
-          {menus.map(e => (
-            <Menu title={e.title} links={e.links} />
+          {menus.map((e, i) => (
+            <Menu key={i} title={e.title} links={e.links} />
           ))}
         </Grid>
         <Divider borderColor="white" />

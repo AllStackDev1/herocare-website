@@ -19,8 +19,8 @@ const Menu: FC<IProps> = ({ title, links }) => {
         {title}
       </Heading>
       <Flex mt={2} direction="column" color="rgba(255, 255, 255, 0.8)">
-        {links.map(e => (
-          <NextLink href={e.link} passHref>
+        {links.map((e, i) => (
+          <NextLink key={i} href={e.link} passHref>
             <Link
               py={2}
               fontSize="md"

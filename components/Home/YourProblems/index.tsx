@@ -13,8 +13,8 @@ const YourProblems: FC = () => {
       text: 'Are your job boards and agencies taking too long to find suitable candidates?'
     },
     {
-      title: 'High recruitment costs',
-      text: 'Are you over-spending on recruitment costs? No one should be forced to pay huge fees such as 30% per hire.'
+      title: 'High recruitment fees',
+      text: 'Are you over-spending on recruitment fees? No one should be forced to pay huge fees such as 30% per hire.'
     },
     {
       title: 'Lack of transparency & excessive administration',
@@ -43,8 +43,8 @@ const YourProblems: FC = () => {
         borderRadius="0px 400px 0px 0px"
       >
         <Grid columnGap={6} templateColumns={{ xl: 'repeat(4, 1fr)' }}>
-          {problems.map(e => (
-            <Card title={e.title} text={e.text} />
+          {problems.map((e, i) => (
+            <Card key={i} title={e.title} text={e.text} />
           ))}
         </Grid>
       </Flex>
