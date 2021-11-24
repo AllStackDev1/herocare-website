@@ -31,16 +31,15 @@ const LookingFor: FC = () => {
   ]
 
   return (
-    <Container py={{ xl: 24 }} minW={{ lg: '7xl', '4xl': '8xl' }}>
-      <Box mb={{ xl: 10 }}>
-        <Heading fontSize="5xl" fontWeight={400}>
+    <Container py={{ base: 10, xl: 24 }} minW={{ lg: '7xl', '4xl': '8xl' }}>
+      <Box mb={{ base: 5, xl: 10 }}>
+        <Heading fontSize={{ base: '2xl', xl: '5xl' }} fontWeight={400}>
           Are you looking for:
         </Heading>
       </Box>
       <Flex w="full" justify="center">
         <Grid
-          rowGap={20}
-          columnGap={20}
+          gap={{ base: 10, xl: 20 }}
           templateColumns={{ xl: 'repeat(3, 1fr)' }}
         >
           {data.map((e, i) => (

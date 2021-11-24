@@ -27,7 +27,7 @@ const Hero: FC = () => {
 
           <Text
             fontSize={{ base: 'sm', xl: 'xl' }}
-            lineHeight={{ base: '28px', xl: '160%' }}
+            lineHeight={{ base: '24px', xl: '160%' }}
           >
             UK's first live database of Carers and Nurses. Recruit your
             permanent and temporary staff from our easy to use platform.

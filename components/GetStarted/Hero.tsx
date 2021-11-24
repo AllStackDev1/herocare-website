@@ -5,22 +5,33 @@ const Hero: FC = () => {
   return (
     <Flex
       w="full"
-      pl={{ '2xl': 24 }}
-      pb={{ '2xl': 36 }}
+      pl={{ base: 5, xl: 24 }}
+      pr={{ base: 5, xl: 0 }}
+      pb={{ base: 10, xl: 36 }}
+      flexDir={{ base: 'column', xl: 'row' }}
       justifyContent="space-between"
     >
-      <Flex mt={28} flexDir="column" justify="end">
+      <Box d={{ base: 'block', xl: 'none' }} mt={{ base: 20 }}>
+        <Image
+          src="./images/boy-drawing-on-tablet.png"
+          alt="mother and daughter"
+        />
+      </Box>
+      <Flex mt={{ base: 5, xl: 28 }} flexDir="column" justify="end">
         <Box w={{ '2xl': 123 }}>
           <Heading
             fontWeight={400}
-            fontSize={{ '2xl': '72px' }}
-            lineHeight={{ '2xl': '120%' }}
-            mb={{ '2xl': 6 }}
+            mb={{ base: 3, xl: 6 }}
+            fontSize={{ base: '4xl', xl: '70px' }}
+            lineHeight={{ base: '40px', xl: '120%' }}
           >
             Find your new role at a click of a button
           </Heading>
 
-          <Text fontSize={{ '2xl': 'xl' }} lineHeight={{ '2xl': '160%' }}>
+          <Text
+            fontSize={{ base: 'sm', xl: 'xl' }}
+            lineHeight={{ base: '24px', xl: '160%' }}
+          >
             HeroCare takes the stress out of finding your new permanent or
             temporary role. Our platform gathers your criteria and availability
             and matches you with the most suitable healthcare providers - Care
@@ -31,22 +42,27 @@ const Hero: FC = () => {
           </Text>
         </Box>
 
-        <Box mt={{ '2xl': 10 }}>
+        <Box mt={{ base: 3, xl: 10 }}>
           <Button
-            py={8}
-            px={10}
-            rounded="xl"
+            py={{ base: 6, xl: 8 }}
+            px={{ base: 4, xl: 10 }}
+            rounded={{ base: 'md', xl: 'xl' }}
             variant="solid"
             fontWeight={600}
             _focus={{ outline: 'none' }}
             colorScheme="brandPurple"
-            fontSize={{ base: 'sm', '2xl': 'xl' }}
+            fontSize={{ base: 'sm', xl: 'xl' }}
           >
             Join our waiting list
           </Button>
         </Box>
       </Flex>
-      <Box pos="relative" w={{ '2xl': 125 }} h={{ '2xl': 126 }}>
+      <Box
+        pos="relative"
+        w={{ '2xl': 125 }}
+        h={{ '2xl': 126 }}
+        d={{ base: 'none', xl: 'block' }}
+      >
         <Box pos="absolute" right={0}>
           <Image src="./images/hero-decor-2.svg" alt="illustration" />
         </Box>

@@ -2,7 +2,7 @@ import { FC } from 'react'
 import {
   Box,
   Flex,
-  HStack,
+  Stack,
   Text,
   Image,
   Container,
@@ -24,11 +24,11 @@ const Options: FC = () => {
     <Box bgColor="#F9FAFC">
       <Container py={{ xl: 24 }} minW={{ lg: '7xl', '4xl': '8xl' }}>
         <Box mb={{ xl: 10 }}>
-          <Heading fontSize="5xl" fontWeight={400}>
+          <Heading fontSize={{ base: '2xl', xl: '5xl' }} fontWeight={400}>
             Are you a:
           </Heading>
         </Box>
-        <HStack spacing={20}>
+        <Stack direction={['column', 'row']} spacing={20}>
           {data.map((e, i) => (
             <Flex
               w={80}
@@ -46,7 +46,7 @@ const Options: FC = () => {
               </Box>
             </Flex>
           ))}
-        </HStack>
+        </Stack>
       </Container>
     </Box>
   )
