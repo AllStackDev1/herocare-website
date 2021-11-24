@@ -74,14 +74,15 @@ const Footer: FC = () => {
     }
   ]
   return (
-    <Box w="full" pb={{ xl: 5 }} pt={{ xl: 20 }} bgColor="brand.purple.700">
+    <Box w="full" pb={5} pt={{ base: 5, xl: 20 }} bgColor="brand.purple.700">
       <Container
         color="white"
         textAlign="center"
+        fontSize={{ base: 'sm', xl: 'md' }}
         minW={{ lg: '7xl', '4xl': '8xl' }}
       >
-        <Grid templateColumns={{ lg: '40% 20% 20% 20%' }} columnGap={6} mb={12}>
-          <GridItem textAlign={{ base: 'center', lg: 'left' }}>
+        <Grid templateColumns={{ xl: '40% 20% 20% 20%' }} gap={6} mb={12}>
+          <GridItem textAlign="left">
             <NextLink href="/#" passHref>
               <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
                 <Box
@@ -95,7 +96,6 @@ const Footer: FC = () => {
             </NextLink>
             <Flex
               mt={4}
-              mb={4}
               align={{ base: 'center', lg: 'flex-end' }}
               color="rgba(255, 255, 255, 0.8)"
             >
@@ -124,28 +124,20 @@ const Footer: FC = () => {
           align="center"
           color="rgba(255, 255, 255, 0.7)"
           justifyContent="space-between"
-          direction={{ base: 'column-reverse', lg: 'row' }}
+          direction={{ base: 'column-reverse', xl: 'row' }}
         >
           <Flex align="center">
-            <Text fontSize="md">© 2021 Herocare</Text>
+            <Text>© 2021 Herocare</Text>
           </Flex>
           <Flex w={80} justify="space-around">
             <NextLink href="/#" passHref>
-              <Link
-                fontSize="md"
-                _focus={{ outline: 'none' }}
-                _hover={{ outline: 'none' }}
-              >
+              <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
                 Privacy policy
               </Link>
             </NextLink>
 
             <NextLink href="/#" passHref>
-              <Link
-                fontSize="md"
-                _focus={{ outline: 'none' }}
-                _hover={{ outline: 'none' }}
-              >
+              <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
                 Terms of use
               </Link>
             </NextLink>

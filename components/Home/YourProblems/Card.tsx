@@ -12,13 +12,13 @@ const Card: FC<IProps> = ({ title, text }) => {
     <GridItem
       px={5}
       pt={6}
-      w={72}
       pb={14}
       shadow="xl"
       rounded="xl"
       pos="relative"
       bgColor="white"
       textAlign="left"
+      w={{ xl: 72 }}
     >
       <Box>
         <Icon as={FolderIcon} boxSize={20} />
@@ -29,7 +29,7 @@ const Card: FC<IProps> = ({ title, text }) => {
         </Heading>
       </Box>
       <Box mt={4}>
-        <Text fontSize="md" lineHeight="28px">
+        <Text fontSize={{ base: 'sm', xl: 'md' }} lineHeight="28px">
           {text}
         </Text>
       </Box>

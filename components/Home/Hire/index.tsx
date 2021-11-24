@@ -26,8 +26,16 @@ const Hire: FC = () => {
       pos="relative"
       pt={{ xl: 16 }}
     >
-      <Box w="40%" textAlign="center">
-        <Heading fontWeight={400} fontSize={{ xl: '4xl' }} lineHeight="60px">
+      <Box
+        py={{ base: 10, xl: 0 }}
+        w={{ base: '95%', xl: '40%' }}
+        textAlign="center"
+      >
+        <Heading
+          fontWeight={400}
+          fontSize={{ base: '3xl', xl: '4xl' }}
+          lineHeight={{ base: '32px', xl: '60px' }}
+        >
           Hire Permanent and Temporary candidates with these easy steps
         </Heading>
       </Box>

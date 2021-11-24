@@ -14,7 +14,7 @@ const Step: FC<IProps> = ({ title, text, pos }) => {
       pos="relative"
       alignItems="center"
       justifyContent="space-around"
-      flexDir={pos ? 'row-reverse' : 'row'}
+      flexDir={{ base: 'column', xl: pos ? 'row-reverse' : 'row' }}
     >
       <Box
         pos="absolute"
@@ -23,6 +23,7 @@ const Step: FC<IProps> = ({ title, text, pos }) => {
         top={{ xl: -5 }}
         bgSize="contain"
         bgRepeat="no-repeat"
+        d={{ base: 'none', xl: 'block' }}
         left={pos ? { xl: -20 } : 'unset'}
         right={pos ? 'unset' : { xl: -20 }}
         bgImage="url('./images/blue-circle-shade.png')"
@@ -30,21 +31,29 @@ const Step: FC<IProps> = ({ title, text, pos }) => {
       <Box
         ml={pos ? 0 : { xl: 20 }}
         mr={pos ? { xl: 20 } : 0}
+        w={{ base: '80%', xl: 'full' }}
         transform={`scaleX(${pos ? '-' : '+'}1)`}
       >
         <Image src="./images/man.png" alt="Man illustration with phone" />
       </Box>
       <Box
         mt={{ xl: 6 }}
-        pl={pos ? { xl: 28 } : 0}
-        pr={pos ? 0 : { xl: 28 }}
+        pl={{ base: 5, xl: pos ? 28 : 0 }}
+        pr={{ base: 5, xl: pos ? 0 : 28 }}
         w={{ xl: 126 }}
       >
-        <Heading fontSize="34px" fontWeight={400} lineHeight="48px">
+        <Heading
+          fontWeight={400}
+          fontSize={{ base: '2xl', xl: '34px' }}
+          lineHeight={{ base: '32px', xl: '48px' }}
+        >
           {title}
         </Heading>
-        <Box mt={4}>
-          <Text fontSize="lg" lineHeight="32px">
+        <Box mt={{ base: 2, xl: 4 }}>
+          <Text
+            fontSize={{ base: 'md', xl: 'lg' }}
+            lineHeight={{ base: '24px', xl: '32px' }}
+          >
             {text}
           </Text>
         </Box>

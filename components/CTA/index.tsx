@@ -4,7 +4,12 @@ import Art from './Art'
 
 const CTA: FC = () => {
   return (
-    <Box w="full" py={{ xl: 24 }} pos="relative" bgColor="brand.purple.200">
+    <Box
+      w="full"
+      pos="relative"
+      py={{ base: 10, xl: 24 }}
+      bgColor="brand.purple.200"
+    >
       <Art pos="left" />
       <Art pos="right" />
       <Container
@@ -16,19 +21,21 @@ const CTA: FC = () => {
         <Box>
           <Heading
             fontWeight={400}
-            fontSize={{ xl: '72px' }}
-            lineHeight={{ xl: '120%' }}
-            mb={{ xl: 4 }}
+            fontSize={{ base: '2xl', xl: '72px' }}
+            lineHeight={{ base: '20px', xl: '120%' }}
+            mb={{ base: 2, xl: 4 }}
           >
             A final header with a strong cta
           </Heading>
-          <Text>It breaks up the intimidating blocks of text.</Text>
+          <Text fontWeight={600} fontSize={{ base: 'sm', xl: '2xl' }}>
+            It breaks up the intimidating blocks of text.
+          </Text>
         </Box>
-        <Box mt={{ xl: 10 }}>
+        <Box mt={{ base: 5, xl: 10 }}>
           <Button
-            py={8}
-            px={10}
-            rounded="xl"
+            py={{ base: 6, xl: 8 }}
+            px={{ base: 4, xl: 10 }}
+            rounded={{ base: 'md', xl: 'xl' }}
             variant="solid"
             fontWeight={600}
             _focus={{ outline: 'none' }}

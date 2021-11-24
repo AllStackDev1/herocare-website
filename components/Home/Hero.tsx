@@ -5,51 +5,64 @@ const Hero: FC = () => {
   return (
     <Flex
       w="full"
-      pl={{ '2xl': 24 }}
-      pb={{ '2xl': 24 }}
+      pl={{ base: 5, xl: 24 }}
+      pr={{ base: 5, xl: 0 }}
+      pb={{ base: 10, xl: 24 }}
+      flexDir={{ base: 'column', xl: 'row' }}
       justifyContent="space-between"
     >
-      <Flex mt={28} flexDir="column" justify="end">
-        <Box w={{ '2xl': 122 }}>
+      <Box d={{ base: 'block', xl: 'none' }} mt={{ base: 20 }}>
+        <Image src="./images/overlay-home-hero.png" alt="mother and daughter" />
+      </Box>
+      <Flex mt={{ base: 5, xl: 28 }} flexDir="column" justify="end">
+        <Box w={{ xl: 122 }}>
           <Heading
             fontWeight={400}
-            fontSize={{ '2xl': '70px' }}
-            lineHeight={{ '2xl': '120%' }}
-            mb={{ '2xl': 6 }}
+            mb={{ base: 3, xl: 6 }}
+            fontSize={{ base: '4xl', xl: '70px' }}
+            lineHeight={{ base: '40px', xl: '120%' }}
           >
             Fill your healthcare vacancies at a click of a button
           </Heading>
 
-          <Text fontSize={{ '2xl': 'xl' }} lineHeight={{ '2xl': '160%' }}>
+          <Text
+            fontSize={{ base: 'sm', xl: 'xl' }}
+            lineHeight={{ base: '28px', xl: '160%' }}
+          >
             UK's first live database of Carers and Nurses. Recruit your
             permanent and temporary staff from our easy to use platform.
           </Text>
         </Box>
 
-        <Box mt={{ '2xl': 10 }}>
+        <Box mt={{ base: 3, xl: 10 }}>
           <Button
-            py={8}
-            px={10}
-            rounded="xl"
+            py={{ base: 6, xl: 8 }}
+            px={{ base: 4, xl: 10 }}
+            rounded={{ base: 'md', xl: 'xl' }}
             variant="solid"
             fontWeight={600}
             _focus={{ outline: 'none' }}
             colorScheme="brandPurple"
-            fontSize={{ base: 'sm', '2xl': 'xl' }}
+            fontSize={{ base: 'sm', xl: 'xl' }}
           >
             Join our waiting list
           </Button>
         </Box>
       </Flex>
-      <Box pos="relative" w={{ '2xl': 120 }} h={{ '2xl': 125 }}>
+      <Box
+        pos="relative"
+        w={{ xl: 120 }}
+        h={{ xl: 125 }}
+        d={{ base: 'none', xl: 'block' }}
+      >
         <Box pos="absolute" right={0}>
           <Image src="./images/hero-decor-1.svg" alt="mother and daughter" />
         </Box>
         <Box
-          bottom={{ '2xl': 12 }}
+          bottom={{ xl: 12 }}
           pos="absolute"
-          w={{ '2xl': 116 }}
-          right={{ '2xl': 20 }}
+          w={{ xl: 116 }}
+          right={{ xl: 20 }}
         >
           <Image
             src="./images/overlay-home-hero.png"

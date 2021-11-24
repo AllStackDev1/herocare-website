@@ -1,13 +1,11 @@
 import { FC } from 'react'
 import NextLink from 'next/link'
-import { useRouter } from 'next/router'
 import { FiMenu, FiX } from 'react-icons/fi'
 import {
   Box,
   Text,
   Flex,
   Link,
-  Image,
   Fade,
   Divider,
   IconButton,
@@ -15,47 +13,49 @@ import {
 } from '@chakra-ui/react'
 
 interface IProps {
-  bgColor: string
+  bgColor?: string
   links: { name: string; path: string }[]
 }
 
 const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
-  const router = useRouter()
   const { isOpen, onToggle } = useDisclosure()
 
   const menus = [
     ...links,
     {
       name: 'Login',
-      path: `${process.env.NEXT_APP_APP_URL}/login`
+      path: `${process.env.NEXT_APP_APP_URL || ''}/login`
     },
     {
       name: 'Sign Up',
-      path: `${process.env.NEXT_APP_APP_URL}/register`
+      path: `${process.env.NEXT_APP_APP_URL || ''}/register`
     }
   ]
 
   return (
     <Flex
       h={24}
-      zIndex={100}
       as="nav"
       w="full"
-      shadow="sm"
-      align="center"
       pos="fixed"
+      zIndex={100}
+      align="center"
       bgColor={bgColor}
       px={{ base: 2 }}
       justify="space-between"
       d={{ base: 'flex', xl: 'none' }}
     >
-      <Box as="picture">
-        <source srcSet="/images/logo@2x.png" />
-        <Image src="/images/logo.png" alt="logo" h={12} />
-      </Box>
-      <Box textTransform="capitalize" fontSize={25} fontWeight="bold">
-        {router.pathname.replace('/', '').replace('-', ' ')}
-      </Box>
+      <Flex w="full" justify="center">
+        <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
+          <Box
+            bgImage="url('./images/logo.png')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            w={32}
+            h={6}
+          />
+        </Link>
+      </Flex>
 
       <Box>
         <IconButton
@@ -88,7 +88,7 @@ const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
                           </Link>
                         </NextLink>
                       </Flex>
-                      {links.length !== idx + 1 && <Divider />}
+                      {menus.length !== idx + 1 && <Divider />}
                     </Box>
                   ))}
                 </Box>

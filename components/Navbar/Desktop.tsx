@@ -3,16 +3,12 @@ import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import { Box, Container, Flex, Button, Link } from '@chakra-ui/react'
 
-const links = [
-  { name: 'Home', path: '/' },
-  { name: 'How it works ', path: '/how-it-works ' },
-  { name: 'About', path: '/about' }
-  // { name: 'Provider', path: '/provider' },
-  // { name: 'Professionals', path: '/professionals' },
-  // { name: 'Services', path: '/services' }
-]
+interface IProps {
+  bgColor: string
+  links: { name: string; path: string }[]
+}
 
-const Nav: FC = () => {
+const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
   const router = useRouter()
 
   return (
@@ -22,8 +18,10 @@ const Nav: FC = () => {
       as="nav"
       w="full"
       zIndex={10}
+      pos="fixed"
       align="center"
-      pos="absolute"
+      bgColor={bgColor}
+      d={{ base: 'none', xl: 'flex' }}
     >
       <Container
         d="flex"
@@ -69,7 +67,7 @@ const Nav: FC = () => {
 
         <Flex align="center">
           <Link
-            href="/sign-in"
+            href={`${process.env.NEXT_APP_APP_URL || ''}/login`}
             _hover={{ hover: 'none' }}
             _focus={{ outline: 'none' }}
             rel="noreferrer"
@@ -89,7 +87,7 @@ const Nav: FC = () => {
           </Link>
           <Box mx={4} />
           <Link
-            href="/sign-up"
+            href={`${process.env.NEXT_APP_APP_URL || ''}/register`}
             _hover={{ hover: 'none' }}
             _focus={{ outline: 'none' }}
             rel="noreferrer"
@@ -114,4 +112,4 @@ const Nav: FC = () => {
   )
 }
 
-export default Nav
+export default DesktopNavbar

@@ -11,8 +11,8 @@ const Menu: FC<IProps> = ({ title, links }) => {
   return (
     <GridItem textAlign="left">
       <Heading
-        fontSize="md"
         color="white"
+        fontSize={{ base: 'sm', xl: 'md' }}
         fontFamily="MartelSans"
         fontWeight={600}
       >
@@ -23,7 +23,6 @@ const Menu: FC<IProps> = ({ title, links }) => {
           <NextLink key={i} href={e.link} passHref>
             <Link
               py={2}
-              fontSize="md"
               lineHeight="24px"
               _focus={{ outline: 'none' }}
               _hover={{ outline: 'none' }}

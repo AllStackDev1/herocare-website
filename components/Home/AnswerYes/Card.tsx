@@ -38,12 +38,19 @@ const Card: FC<IProps> = ({ title, text, color }) => {
     >
       <Box top={0} left={0} {...styles} />
       <Box mt={6}>
-        <Heading fontSize="34px" fontWeight={400} lineHeight="36px">
+        <Heading
+          fontWeight={400}
+          fontSize={{ base: '2xl', xl: '34px' }}
+          lineHeight={{ base: '32px', xl: '36px' }}
+        >
           {title}
         </Heading>
       </Box>
       <Box mt={4}>
-        <Text fontSize="lg" lineHeight="32px">
+        <Text
+          fontSize={{ base: 'md', xl: 'lg' }}
+          lineHeight={{ base: '30px', xl: '32px' }}
+        >
           {text}
         </Text>
       </Box>

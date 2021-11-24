@@ -34,21 +34,30 @@ const AnswerYes: FC = () => {
       pt={{ xl: 16 }}
       pb={{ xl: 28 }}
     >
-      <Box w="50%" textAlign="center">
-        <Heading fontWeight={400} fontSize={{ xl: '4xl' }} lineHeight="60px">
+      <Box
+        py={{ base: 10, xl: 0 }}
+        w={{ base: '95%', xl: '50%' }}
+        textAlign="center"
+      >
+        <Heading
+          fontWeight={400}
+          fontSize={{ base: '3xl', xl: '4xl' }}
+          lineHeight={{ base: '32px', xl: '60px' }}
+        >
           If the answer to any of the above is yes, our recruitment platform is
           your solution
         </Heading>
       </Box>
       <Box
         bgImage="url('./images/curved-arrow.png')"
+        d={{ base: 'none', xl: 'block' }}
         bgRepeat="no-repeat"
         bgSize="contain"
         pos="absolute"
-        ml={{ xl: -52 }}
-        mt={{ xl: 12 }}
-        w={{ xl: 130 }}
-        h={{ xl: 52 }}
+        ml={-52}
+        mt={12}
+        w={130}
+        h={52}
       />
       <Container mt={{ lg: 16 }} minW={{ lg: '3xl' }}>
         <Grid gap={10} templateColumns={{ xl: 'repeat(2, 1fr)' }}>
