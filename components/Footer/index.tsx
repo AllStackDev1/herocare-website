@@ -48,7 +48,6 @@ const Footer: FC = () => {
         }
       ]
     },
-
     {
       title: 'Company',
       links: [
@@ -65,24 +64,24 @@ const Footer: FC = () => {
         //   link: '/#'
         // }
       ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        // {
-        //   title: 'Guides',
-        //   link: '/#'
-        // },
-        // {
-        //   title: 'Carer training',
-        //   link: '/#'
-        // },
-        // {
-        //   title: 'Help & support',
-        //   link: '/#'
-        // }
-      ]
     }
+    // {
+    //   title: 'Resources',
+    //   links: [
+    // {
+    //   title: 'Guides',
+    //   link: '/#'
+    // },
+    // {
+    //   title: 'Carer training',
+    //   link: '/#'
+    // },
+    // {
+    //   title: 'Help & support',
+    //   link: '/#'
+    // }
+    //   ]
+    // }
   ]
   return (
     <Box w="full" pb={5} pt={{ base: 5, xl: 20 }} bgColor="brand.purple.700">
