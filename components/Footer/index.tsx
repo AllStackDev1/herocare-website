@@ -53,13 +53,17 @@ const Footer: FC = () => {
       title: 'Company',
       links: [
         {
-          title: 'About',
-          link: '/#'
+          title: 'How it works',
+          link: '/become-a-carer/#how-it-works'
         },
         {
-          title: 'Contact',
-          link: '/#'
+          title: 'About',
+          link: '/become-a-carer/#about-us'
         }
+        // {
+        //   title: 'Contact',
+        //   link: '/#'
+        // }
       ]
     },
     {
