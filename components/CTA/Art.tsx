@@ -13,8 +13,8 @@ interface IStyle {
 
 const Art: FC<{ pos: 'left' | 'right' }> = ({ pos }) => {
   const styles: IStyle = {
-    w: { xl: 10 },
-    h: { xl: 52 },
+    w: { xl: 8 },
+    h: { xl: 44 },
     pos: 'absolute',
     bgColor: 'brand.purple.700',
     left: pos == 'left' ? { xl: -5 } : 'unset',

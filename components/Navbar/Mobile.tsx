@@ -20,17 +20,17 @@ interface IProps {
 const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
   const { isOpen, onToggle } = useDisclosure()
 
-  const menus = [
-    ...links,
-    {
-      name: 'Login',
-      path: `${process.env.NEXT_APP_APP_URL || ''}/login`
-    },
-    {
-      name: 'Sign Up',
-      path: `${process.env.NEXT_APP_APP_URL || ''}/register`
-    }
-  ]
+  // const menus = [
+  //   ...links,
+  //   {
+  //     name: 'Login',
+  //     path: `${process.env.NEXT_APP_APP_URL || ''}/login`
+  //   },
+  //   {
+  //     name: 'Sign Up',
+  //     path: `${process.env.NEXT_APP_APP_URL || ''}/register`
+  //   }
+  // ]
 
   return (
     <Flex
@@ -79,7 +79,7 @@ const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
                 bgColor="white"
               >
                 <Box py={2}>
-                  {menus.map((m, idx) => (
+                  {links.map((m, idx) => (
                     <Box>
                       <Flex justify="end" pr={5} py={3} key={idx}>
                         <NextLink href={m.path} passHref>
@@ -88,7 +88,7 @@ const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
                           </Link>
                         </NextLink>
                       </Flex>
-                      {menus.length !== idx + 1 && <Divider />}
+                      {links.length !== idx + 1 && <Divider />}
                     </Box>
                   ))}
                 </Box>

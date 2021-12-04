@@ -38,7 +38,7 @@ const Step: FC<IProps> = ({ title, text, pos }) => {
       </Box>
       <Box
         mt={{ xl: 6 }}
-        w={{ xl: 126 }}
+        w={{ xl: 126, '4xl': 130 }}
         pl={{ base: 5, xl: pos ? 28 : 0 }}
         pr={{ base: 5, xl: pos ? 0 : 28 }}
       >

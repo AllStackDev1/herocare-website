@@ -6,15 +6,15 @@ const LookingFor: FC = () => {
   const data = [
     {
       title: 'A simpler way to get hired',
-      text: 'Companies can reach out to you directly, but we also recommend the best opportunities.'
+      text: 'Clients can reach out to you directly, but we also recommend the best opportunities.'
     },
     {
       title: 'Set your own salary expectations',
-      text: 'Employers will see what you expect upfront to avoid those.'
+      text: 'Clients will see what you expect upfront.'
     },
     {
       title: 'Exciting work opportunities',
-      text: 'Find highly rated care homes and hospitals in one platform.'
+      text: 'Find highly rated care homes, hospitals and individual clients in one platform.'
     },
     {
       title: 'Freedom',
@@ -31,7 +31,11 @@ const LookingFor: FC = () => {
   ]
 
   return (
-    <Container py={{ base: 10, xl: 24 }} minW={{ lg: '7xl', '4xl': '8xl' }}>
+    <Container
+      id="about-us"
+      py={{ base: 10, xl: 24 }}
+      minW={{ lg: '7xl', '4xl': '8xl' }}
+    >
       <Box mb={{ base: 5, xl: 10 }}>
         <Heading fontSize={{ base: '2xl', xl: '5xl' }} fontWeight={400}>
           Are you looking for:

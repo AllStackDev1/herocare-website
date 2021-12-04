@@ -6,7 +6,7 @@ const YourProblems: FC = () => {
   const problems = [
     {
       title: 'Lack of Staff',
-      text: 'Are you facing staff shortages due to Covid- 19, Brexit and changing regulations?'
+      text: 'Are you facing staff shortages due to Covid-19, Brexit and changing regulations?'
     },
     {
       title: 'Lengthy time-to-hire',
@@ -18,7 +18,7 @@ const YourProblems: FC = () => {
     },
     {
       title: 'Lack of transparency & excessive administration',
-      text: 'Are you facing staff shortages due to Covid- 19, Brexit and changing regulations?'
+      text: 'We know that back and forth communication with recruiters can be unclear and overwhelming.'
     }
   ]
 

@@ -6,7 +6,7 @@ const AnswerYes: FC = () => {
   const answers = [
     {
       title: 'Get instant access to our staff database',
-      text: 'We provide you access to a database of pre-vetted Carers and Nurses. We have an in-house Carer, Nurse and Doctor team that selects the best candidates for our database.',
+      text: 'We provide you access to a database of pre-vetted Carers. We have an in-house Carer, Nurse and Doctor team that selects the best candidates for our database.',
       color: '#E8B4A9'
     },
     {
@@ -16,12 +16,12 @@ const AnswerYes: FC = () => {
     },
     {
       title: 'Simpler & cheaper fees',
-      text: 'We charge you a small subscription fee for the hiring tools + recruitment fees which are up to 2/3rd cheaper than mainstream recruitment companies.',
+      text: 'Our fees are up to 60% cheaper than mainstream recruitment companies.',
       color: '#88BAAE'
     },
     {
       title: 'Hiring tools',
-      text: 'We provide you with a live candidate database, a candidate tracking system, virtual interviews, Contract management, timesheet management capabilities and payment solutions.',
+      text: 'We provide you with a live candidate database, a candidate tracking system, virtual interviews, contract management, time-sheet management capabilities and payment solutions.',
       color: '#DCAC64'
     }
   ]

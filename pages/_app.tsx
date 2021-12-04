@@ -40,8 +40,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const links = [
     { name: 'Home', path: '/' },
-    { name: 'How it works ', path: '/how-it-works ' },
-    { name: 'About', path: '/about' }
+    { name: 'Become a Carer', path: '/become-a-carer' },
+    { name: 'How it works', path: '/become-a-carer/#how-it-works' },
+    { name: 'About', path: '/become-a-carer/#about-us' }
   ]
 
   return (

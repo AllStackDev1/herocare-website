@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <YourProblems />
       <AnswerYes />
       <Hire />
-      <CTA />
+      <CTA ctaLink="https://ps7w173z49l.typeform.com/to/G541nECs" />
     </Layout>
   )
 }

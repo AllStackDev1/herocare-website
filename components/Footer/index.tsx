@@ -11,8 +11,14 @@ import {
   GridItem,
   Container
 } from '@chakra-ui/react'
-import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { AiFillInstagram } from 'react-icons/ai'
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhone,
+  FaTwitter
+} from 'react-icons/fa'
 import Menu from './Menu'
 
 const Footer: FC = () => {
@@ -42,23 +48,7 @@ const Footer: FC = () => {
         }
       ]
     },
-    {
-      title: 'Resources',
-      links: [
-        {
-          title: 'Guides',
-          link: '/#'
-        },
-        {
-          title: 'Carer training',
-          link: '/#'
-        },
-        {
-          title: 'Help & support',
-          link: '/#'
-        }
-      ]
-    },
+
     {
       title: 'Company',
       links: [
@@ -70,6 +60,23 @@ const Footer: FC = () => {
           title: 'Contact',
           link: '/#'
         }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        // {
+        //   title: 'Guides',
+        //   link: '/#'
+        // },
+        // {
+        //   title: 'Carer training',
+        //   link: '/#'
+        // },
+        // {
+        //   title: 'Help & support',
+        //   link: '/#'
+        // }
       ]
     }
   ]
@@ -106,10 +113,62 @@ const Footer: FC = () => {
                 <Icon as={FaTwitter} boxSize={5} />
               </Box>
               <Box w={10} h={10}>
-                <Icon as={AiFillInstagram} boxSize={5} />
+                <Link
+                  href="https://www.instagram.com/herocare_ltd/"
+                  _focus={{ outline: 'none' }}
+                  _hover={{ outline: 'none' }}
+                >
+                  <Icon as={FaInstagram} boxSize={5} />
+                </Link>
               </Box>
               <Box w={10} h={10}>
-                <Icon as={FaYoutube} boxSize={5} />
+                <Link
+                  href="https://www.linkedin.com/company/herocareltd/?viewAsMember=true"
+                  _focus={{ outline: 'none' }}
+                  _hover={{ outline: 'none' }}
+                >
+                  <Icon as={FaLinkedinIn} boxSize={5} />
+                </Link>
+              </Box>
+            </Flex>
+            <Flex fontSize={10} flexDir="column" w={80}>
+              <Text>
+                HeroCare Ltd is registered in England and Wales (number
+                12734836)
+              </Text>
+              <Text>
+                Registered Office: First Floor, 85 Great Portland Street,
+                London, Greater London, W1W 7LT
+              </Text>
+              <Text>
+                The Care Quality Commission (CQC) defines companies like
+                HeroCare as an introductory agency pursuant to the Health &
+                Social Care Act 2008
+              </Text>
+              <Box mt={4}>
+                <Box mb={2}>
+                  <Link
+                    d="flex"
+                    href="mailto:hello@herocare.co.uk"
+                    _focus={{ outline: 'none' }}
+                    _hover={{ outline: 'none' }}
+                  >
+                    <Icon as={FaEnvelope} boxSize={3} mr={1} />
+
+                    <Text>hello@herocare.co.uk</Text>
+                  </Link>
+                </Box>
+                <Box>
+                  <Link
+                    d="flex"
+                    href="tel:+44"
+                    _focus={{ outline: 'none' }}
+                    _hover={{ outline: 'none' }}
+                  >
+                    <Icon as={FaPhone} boxSize={3} mr={1} />
+                    <Text>+44</Text>
+                  </Link>
+                </Box>
               </Box>
             </Flex>
           </GridItem>

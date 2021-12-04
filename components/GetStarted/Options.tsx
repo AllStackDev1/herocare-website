@@ -12,13 +12,13 @@ import {
 const Options: FC = () => {
   const data = [
     {
-      title: 'Career',
+      title: 'Carer',
       src: 'man-sitting-on-sofa.png'
-    },
-    {
-      title: 'Nurse',
-      src: 'man-listening-music.png'
     }
+    // {
+    //   title: 'Nurse',
+    //   src: 'man-listening-music.png'
+    // }
   ]
   return (
     <Box bgColor="#F9FAFC">

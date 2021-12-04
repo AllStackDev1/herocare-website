@@ -1,7 +1,7 @@
-import { FC, Fragment } from 'react'
+import { FC, useState, useEffect, Fragment } from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { Box, Container, Flex, Button, Link } from '@chakra-ui/react'
+import { Box, Container, Flex, Link } from '@chakra-ui/react'
 
 interface IProps {
   bgColor: string
@@ -10,6 +10,39 @@ interface IProps {
 
 const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
   const router = useRouter()
+  const [activeHash, setActiveHash] = useState('')
+
+  useEffect(() => {
+    setActiveHash(sessionStorage.getItem('current_hash') || '')
+
+    if (window.location.hash) {
+      setActiveHash(window.location.hash.split('#')[1] || '')
+    }
+    const onHashChangeStart = (url: string) => {
+      setActiveHash(url.split('#')[1] || '')
+      sessionStorage.setItem('current_hash', url.split('#')[1] || '')
+    }
+
+    router.events.on('hashChangeStart', onHashChangeStart)
+
+    return () => {
+      sessionStorage.setItem('current_hash', '')
+      router.events.off('hashChangeStart', onHashChangeStart)
+    }
+  }, [])
+
+  const getActiveLink = (path: string) => {
+    if (activeHash) {
+      if (router.pathname + '/#' + activeHash === path) {
+        return true
+      }
+    } else {
+      if (router.pathname === path) {
+        return true
+      }
+    }
+    return false
+  }
 
   return (
     <Flex
@@ -50,7 +83,7 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
                   _hover={{ hover: 'none' }}
                   _focus={{ outline: 'none' }}
                   rel="noreferrer"
-                  {...(router.pathname === item.path
+                  {...(getActiveLink(item.path)
                     ? {
                         color: 'brand.purple.200',
                         fontWeight: 700
@@ -65,7 +98,7 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
           ))}
         </Flex>
 
-        <Flex align="center">
+        {/* <Flex align="center">
           <Link
             href={`${process.env.NEXT_APP_APP_URL || ''}/login`}
             _hover={{ hover: 'none' }}
@@ -106,7 +139,7 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
               Sign Up
             </Button>
           </Link>
-        </Flex>
+        </Flex> */}
       </Container>
     </Flex>
   )

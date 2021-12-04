@@ -10,11 +10,11 @@ const HowItWorks: FC = () => {
     },
     {
       title: 'Receive the best suited recommendations',
-      text: 'Once your profile is live, we can show you the companies who are looking for candidates like you. Our software will automatically match you with relevant jobs. You can reach out to the companies or wait to be contacted - the choice is yours.'
+      text: 'Once your profile is live, we can show you clients who are looking for candidates like you. Our software will automatically match you with relevant jobs. You can reach out or be contacted - the choice is yours.'
     },
     {
       title: 'Get interviewed and hired at the click of a button',
-      text: "Once you've been matched with your dream company, you will be invited to a virtual or in-person interview. Once successful, you will be made an offer all within our platform and receive your contract. Through your dashboard you can manage timesheets and your billing for temporary hours. If you are applying for permanent roles, we will say goodbye once you have been hired, but we look forward to welcoming you again when you are looking for your next assignment"
+      text: "Once you've been matched with your dream job, you will be invited to a virtual or in-person interview. Once successful, you will be made an offer all within our platform and receive your contract. Through your dashboard you can manage time-sheets and your billing for temporary hours. If you are applying for permanent roles, we will say goodbye once you have been hired, but we look forward to welcoming you again when you are looking for your next assignment."
     }
   ]
 
@@ -22,6 +22,7 @@ const HowItWorks: FC = () => {
     <Flex
       w="full"
       align="center"
+      id="how-it-works"
       flexDir="column"
       pos="relative"
       pt={{ xl: 16 }}
