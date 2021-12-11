@@ -1,7 +1,9 @@
-import { FC, useState, useEffect, Fragment } from 'react'
-import NextLink from 'next/link'
+import { FC, Fragment } from 'react'
 import { useRouter } from 'next/router'
-import { Box, Container, Flex, Link } from '@chakra-ui/react'
+import { Box, Container, Flex } from '@chakra-ui/react'
+
+import useHashLink from 'hooks/useHashLink'
+import Link from './Link'
 
 interface IProps {
   bgColor: string
@@ -10,30 +12,11 @@ interface IProps {
 
 const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
   const router = useRouter()
-  const [activeHash, setActiveHash] = useState('')
-
-  useEffect(() => {
-    setActiveHash(sessionStorage.getItem('current_hash') || '')
-
-    if (window.location.hash) {
-      setActiveHash(window.location.hash.split('#')[1] || '')
-    }
-    const onHashChangeStart = (url: string) => {
-      setActiveHash(url.split('#')[1] || '')
-      sessionStorage.setItem('current_hash', url.split('#')[1] || '')
-    }
-
-    router.events.on('hashChangeStart', onHashChangeStart)
-
-    return () => {
-      sessionStorage.setItem('current_hash', '')
-      router.events.off('hashChangeStart', onHashChangeStart)
-    }
-  }, [])
+  const { activeHash } = useHashLink(router)
 
   const getActiveLink = (path: string) => {
     if (activeHash) {
-      if (router.pathname + '/#' + activeHash === path) {
+      if (router.pathname + '#' + activeHash === path) {
         return true
       }
     } else {
@@ -61,38 +44,39 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
         justifyContent="space-between"
         minW={{ lg: '7xl', '4xl': '8xl' }}
       >
-        <NextLink href="/" passHref>
-          <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
-            <Box
-              bgImage="url('./images/logo.png')"
-              bgRepeat="no-repeat"
-              bgSize="contain"
-              w={40}
-              h={8}
-            />
-          </Link>
-        </NextLink>
+        <Link
+          href="/"
+          _focus={{ outline: 'none' }}
+          _hover={{ outline: 'none' }}
+        >
+          <Box
+            bgImage="url('./images/logo.png')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            w={40}
+            h={8}
+          />
+        </Link>
 
         <Flex align="center">
           {links.map((item, idx) => (
             <Fragment key={item.name}>
-              <NextLink href={item.path} passHref>
-                <Link
-                  fontWeight={400}
-                  fontSize={{ base: 'sm', xl: 'md' }}
-                  _hover={{ hover: 'none' }}
-                  _focus={{ outline: 'none' }}
-                  rel="noreferrer"
-                  {...(getActiveLink(item.path)
-                    ? {
-                        color: 'brand.purple.200',
-                        fontWeight: 700
-                      }
-                    : '')}
-                >
-                  {item.name}
-                </Link>
-              </NextLink>
+              <Link
+                href={item.path}
+                fontWeight={400}
+                fontSize={{ base: 'sm', xl: 'md' }}
+                _hover={{ hover: 'none' }}
+                _focus={{ outline: 'none' }}
+                rel="noreferrer"
+                {...(getActiveLink(item.path)
+                  ? {
+                      color: 'brand.purple.200',
+                      fontWeight: 700
+                    }
+                  : '')}
+              >
+                {item.name}
+              </Link>
               {links.length !== idx + 1 && <Box mx={4} />}
             </Fragment>
           ))}

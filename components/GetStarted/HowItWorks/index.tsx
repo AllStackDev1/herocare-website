@@ -26,6 +26,7 @@ const HowItWorks: FC = () => {
       flexDir="column"
       pos="relative"
       pt={{ xl: 16 }}
+      style={{ scrollMarginTop: '50px' }}
     >
       <Box
         py={{ base: 10, xl: 0 }}

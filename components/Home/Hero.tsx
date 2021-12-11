@@ -22,15 +22,15 @@ const Hero: FC = () => {
             fontSize={{ base: '4xl', xl: '70px' }}
             lineHeight={{ base: '40px', xl: '120%' }}
           >
-            Fill your healthcare vacancies at a click of a button
+            Fill your Carer vacancies at a click of a button
           </Heading>
 
           <Text
             fontSize={{ base: 'sm', xl: 'xl' }}
             lineHeight={{ base: '24px', xl: '160%' }}
           >
-            UK's first live database of Carers and Nurses. Recruit your
-            permanent and temporary staff from our easy to use platform.
+            UK's first live database of Carers available for hire by companies
+            and individuals.
           </Text>
         </Box>
 

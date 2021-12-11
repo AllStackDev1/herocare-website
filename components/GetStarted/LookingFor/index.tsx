@@ -35,6 +35,7 @@ const LookingFor: FC = () => {
       id="about-us"
       py={{ base: 10, xl: 24 }}
       minW={{ lg: '7xl', '4xl': '8xl' }}
+      style={{ scrollMarginTop: '50px' }}
     >
       <Box mb={{ base: 5, xl: 10 }}>
         <Heading fontSize={{ base: '2xl', xl: '5xl' }} fontWeight={400}>
