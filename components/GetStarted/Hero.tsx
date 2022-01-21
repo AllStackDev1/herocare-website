@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { Box, Flex, Text, Image, Button, Heading } from '@chakra-ui/react'
+import { Box, Link, Flex, Text, Image, Button, Heading } from '@chakra-ui/react'
 
-const Hero: FC = () => {
+const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
   return (
     <Flex
       w="full"
@@ -43,18 +43,24 @@ const Hero: FC = () => {
         </Box>
 
         <Box mt={{ base: 3, xl: 10 }}>
-          <Button
-            py={{ base: 6, xl: 8 }}
-            px={{ base: 4, xl: 10 }}
-            rounded={{ base: 'md', xl: 'xl' }}
-            variant="solid"
-            fontWeight={600}
+          <Link
+            href={ctaLink}
             _focus={{ outline: 'none' }}
-            colorScheme="brandPurple"
-            fontSize={{ base: 'sm', xl: 'xl' }}
+            _hover={{ outline: 'none' }}
           >
-            Join our waiting list
-          </Button>
+            <Button
+              py={{ base: 6, xl: 8 }}
+              px={{ base: 4, xl: 10 }}
+              rounded={{ base: 'md', xl: 'xl' }}
+              variant="solid"
+              fontWeight={600}
+              _focus={{ outline: 'none' }}
+              colorScheme="brandPurple"
+              fontSize={{ base: 'sm', xl: 'xl' }}
+            >
+              Join our waiting list
+            </Button>
+          </Link>
         </Box>
       </Flex>
       <Box

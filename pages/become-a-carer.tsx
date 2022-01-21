@@ -9,7 +9,7 @@ import HowItWorks from '@components/GetStarted/HowItWorks'
 const GetStarted: NextPage = () => {
   return (
     <Layout>
-      <Hero />
+      <Hero ctaLink="https://ps7w173z49l.typeform.com/to/FZhbBtT1" />
       <Options />
       <LookingFor />
       <HowItWorks />

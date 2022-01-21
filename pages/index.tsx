@@ -9,7 +9,7 @@ import CTA from '@components/CTA'
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Hero />
+      <Hero ctaLink="https://ps7w173z49l.typeform.com/to/G541nECs" />
       <YourProblems />
       <AnswerYes />
       <Hire />
