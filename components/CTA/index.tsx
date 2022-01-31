@@ -25,7 +25,7 @@ const CTA: FC<{ ctaLink: string }> = ({ ctaLink }) => {
             lineHeight={{ base: '20px', xl: '120%' }}
             mb={{ base: 2, xl: 4 }}
           >
-            Join our waiting list.
+            Apply Now
           </Heading>
         </Box>
         <Box mt={{ base: 5, xl: 10 }}>
@@ -35,16 +35,16 @@ const CTA: FC<{ ctaLink: string }> = ({ ctaLink }) => {
             _hover={{ outline: 'none' }}
           >
             <Button
-              py={{ base: 6, xl: 8 }}
-              px={{ base: 4, xl: 10 }}
-              rounded={{ base: 'md', xl: 'xl' }}
+              w="30%"
               variant="solid"
               fontWeight={600}
-              _focus={{ outline: 'none' }}
+              py={{ base: 6, xl: 8 }}
               colorScheme="brandOrange"
+              _focus={{ outline: 'none' }}
+              rounded={{ base: 'md', xl: 'xl' }}
               fontSize={{ base: 'sm', xl: 'xl' }}
             >
-              Join our waiting list
+              Apply
             </Button>
           </Link>
         </Box>

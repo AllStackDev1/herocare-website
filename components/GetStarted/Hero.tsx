@@ -17,7 +17,7 @@ const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
           alt="mother and daughter"
         />
       </Box>
-      <Flex mt={{ base: 5, xl: 28 }} flexDir="column" justify="end">
+      <Flex mt={{ base: 5, xl: 28 }} flexDir="column" justify="center">
         <Box w={{ '2xl': 123 }}>
           <Heading
             fontWeight={400}
@@ -25,20 +25,15 @@ const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
             fontSize={{ base: '4xl', xl: '70px' }}
             lineHeight={{ base: '40px', xl: '120%' }}
           >
-            Find your new role at a click of a button
+            Become a Nurse or Carer in the UK
           </Heading>
 
           <Text
             fontSize={{ base: 'sm', xl: 'xl' }}
             lineHeight={{ base: '24px', xl: '160%' }}
           >
-            HeroCare takes the stress out of finding your new permanent or
-            temporary role. Our platform gathers your criteria and availability
-            and matches you with the most suitable healthcare providers - Care
-            Homes, Hospitals and Clinics. We make the recruitment journey
-            transparent so you know where you are each step of the way. We also
-            take care of your contract, and billing needs so you get paid
-            faster.
+            Are you a qualified Nurse, Carer or someone passionate about the
+            care industry? We can help you secure a job and relocate to the UK.
           </Text>
         </Box>
 
@@ -49,16 +44,16 @@ const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
             _hover={{ outline: 'none' }}
           >
             <Button
-              py={{ base: 6, xl: 8 }}
-              px={{ base: 4, xl: 10 }}
-              rounded={{ base: 'md', xl: 'xl' }}
+              w="30%"
               variant="solid"
               fontWeight={600}
-              _focus={{ outline: 'none' }}
+              py={{ base: 6, xl: 8 }}
               colorScheme="brandPurple"
+              _focus={{ outline: 'none' }}
+              rounded={{ base: 'md', xl: 'xl' }}
               fontSize={{ base: 'sm', xl: 'xl' }}
             >
-              Join our waiting list
+              Apply
             </Button>
           </Link>
         </Box>

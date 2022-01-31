@@ -12,24 +12,22 @@ const Card: FC<IProps> = ({ title, text }) => {
     <GridItem
       px={5}
       pt={6}
-      pb={14}
+      pb={10}
       shadow="xl"
       rounded="xl"
       pos="relative"
       bgColor="white"
       textAlign="left"
-      w={{ xl: 72 }}
+      w={{ xl: 80 }}
     >
       <Box>
         <Icon as={FolderIcon} boxSize={20} />
       </Box>
-      <Box mt={6}>
-        <Heading fontSize="xl" fontWeight={400} lineHeight="32px">
-          {title}
-        </Heading>
-      </Box>
+      <Heading fontSize="xl" fontWeight={400} lineHeight="30px">
+        {title}
+      </Heading>
       <Box mt={4}>
-        <Text fontSize={{ base: 'sm', xl: 'md' }} lineHeight="28px">
+        <Text fontSize={{ base: 'sm', xl: 'sm' }} lineHeight="28px">
           {text}
         </Text>
       </Box>

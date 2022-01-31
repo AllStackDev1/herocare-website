@@ -5,16 +5,16 @@ import Step from './Step'
 const Hire: FC = () => {
   const steps = [
     {
-      title: 'Enter your requirements',
-      text: 'Enter your job requirements and create a company profile. You can choose to post a live job ad that will appear to the relevant candidates or search the live database. You can be sure that we do preliminary vetting on all our candidates to ensure you are getting the highest calibre candidates.'
+      title: '1. Submit your job requirements',
+      text: "Fill in the 'Hire Now' form with all your requirements and we will get in touch to discuss your job vacancies. To recruit staff internationally you will need a sponsor licence."
     },
     {
-      title: 'Get matched',
-      text: 'Our software matches you to candidates based on the experience, availability and other preferences your company requires. You can view the candidate profiles, shortlist them and invite them for a virtual or in- person interview straight from our platform.'
+      title: '2. Interview',
+      text: 'HeroCare works with international partners to vet, screen and interview international candidates. We ensure candidates are adequately trained and qualified before we introduce them to you.'
     },
     {
-      title: 'Interview and hire',
-      text: 'We provide you with the interviewing, messaging and contracting tools to enable end- to-end recruitment under one platform. No need to waste time switching between different hiring softwares.'
+      title: '3. Job Offer',
+      text: 'Once you provide a job offer and certificate of sponsorship to a candidate, we support them with visa processing - visa decisions take as little as 3 weeks.'
     }
   ]
 
@@ -36,7 +36,7 @@ const Hire: FC = () => {
           fontSize={{ base: '3xl', xl: '4xl' }}
           lineHeight={{ base: '32px', xl: '60px' }}
         >
-          Hire Permanent and Temporary candidates with these easy steps
+          The Recruitment Process
         </Heading>
       </Box>
       <Grid gap={10} templateColumns={{ xl: 'repeat(1, 1fr)' }}>

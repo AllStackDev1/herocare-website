@@ -13,11 +13,11 @@ import {
 } from '@chakra-ui/react'
 import {
   FaEnvelope,
-  FaFacebookF,
+  // FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaPhone,
-  FaTwitter
+  FaPhone
+  // FaTwitter
 } from 'react-icons/fa'
 import Menu from './Menu'
 
@@ -52,17 +52,17 @@ const Footer: FC = () => {
       title: 'Company',
       links: [
         {
-          title: 'How it works',
-          link: '/become-a-carer/#how-it-works'
+          title: 'Contact',
+          link: '/#'
         },
+        // {
+        //   title: 'How it works',
+        //   link: '/become-a-carer/#how-it-works'
+        // },
         {
           title: 'About',
-          link: '/become-a-carer/#about-us'
+          link: '#about-us'
         }
-        // {
-        //   title: 'Contact',
-        //   link: '/#'
-        // }
       ]
     }
     // {
@@ -109,12 +109,12 @@ const Footer: FC = () => {
               align={{ base: 'center', lg: 'flex-end' }}
               color="rgba(255, 255, 255, 0.8)"
             >
-              <Box w={10} h={10}>
+              {/* <Box w={10} h={10}>
                 <Icon as={FaFacebookF} boxSize={5} />
               </Box>
               <Box w={10} h={10}>
                 <Icon as={FaTwitter} boxSize={5} />
-              </Box>
+              </Box> */}
               <Box w={10} h={10}>
                 <Link
                   href="https://www.instagram.com/herocare_ltd/"
@@ -164,12 +164,12 @@ const Footer: FC = () => {
                 <Box>
                   <Link
                     d="flex"
-                    href="tel:+44"
+                    href="tel:(+44) 208 798 2044"
                     _focus={{ outline: 'none' }}
                     _hover={{ outline: 'none' }}
                   >
                     <Icon as={FaPhone} boxSize={3} mr={1} />
-                    <Text>+44</Text>
+                    <Text>(+44) 208 798 2044</Text>
                   </Link>
                 </Box>
               </Box>

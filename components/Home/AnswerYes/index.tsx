@@ -6,17 +6,17 @@ const AnswerYes: FC = () => {
   const answers = [
     {
       title: 'Get instant access to our staff database',
-      text: 'We provide you access to a database of pre-vetted Carers. We have an in-house Carer, Nurse and Doctor team that selects the best candidates for our database.',
+      text: 'We provide you access to a database of pre-vetted Carers and Nurses. We have an in-house medical team that selects the best candidates for our database.',
       color: '#E8B4A9'
     },
     {
       title: 'Automated matching',
-      text: 'Our platform automatically selects the most suited candidates based on your unique requirements. Say goodbye to spending hours sifting through candidate cvs.',
+      text: 'Our platform automatically selects the most suited candidates based on your unique requirements. Say goodbye to spending hours sifting through candidate CVs.',
       color: '#A1A6DB'
     },
     {
       title: 'Simpler & cheaper fees',
-      text: 'Our fees are up to 60% cheaper than mainstream recruitment companies.',
+      text: 'Our fees are up to 50% cheaper than mainstream recruitment companies.',
       color: '#88BAAE'
     },
     {
@@ -28,11 +28,13 @@ const AnswerYes: FC = () => {
   return (
     <Flex
       w="full"
+      id="about-us"
       align="center"
       flexDir="column"
       pos="relative"
       pt={{ xl: 16 }}
       pb={{ xl: 28 }}
+      style={{ scrollMarginTop: '110px' }}
     >
       <Box
         py={{ base: 10, xl: 0 }}
@@ -44,8 +46,7 @@ const AnswerYes: FC = () => {
           fontSize={{ base: '3xl', xl: '4xl' }}
           lineHeight={{ base: '32px', xl: '60px' }}
         >
-          If the answer to any of the above is yes, our recruitment platform is
-          your solution
+          Our automated recruitment platform is coming in 2022!
         </Heading>
       </Box>
       <Box

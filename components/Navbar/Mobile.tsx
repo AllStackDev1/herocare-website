@@ -20,18 +20,6 @@ interface IProps {
 const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
   const { isOpen, onToggle } = useDisclosure()
 
-  // const menus = [
-  //   ...links,
-  //   {
-  //     name: 'Login',
-  //     path: `${process.env.NEXT_APP_APP_URL || ''}/login`
-  //   },
-  //   {
-  //     name: 'Sign Up',
-  //     path: `${process.env.NEXT_APP_APP_URL || ''}/register`
-  //   }
-  // ]
-
   return (
     <Flex
       h={24}
@@ -80,8 +68,8 @@ const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
               >
                 <Box py={2}>
                   {links.map((m, idx) => (
-                    <Box>
-                      <Flex justify="end" pr={5} py={3} key={idx}>
+                    <Box key={idx}>
+                      <Flex justify="end" pr={5} py={3}>
                         <NextLink href={m.path} passHref>
                           <Link>
                             <Text fontWeight={700}>{m.name}</Text>

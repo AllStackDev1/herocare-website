@@ -81,49 +81,6 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
             </Fragment>
           ))}
         </Flex>
-
-        {/* <Flex align="center">
-          <Link
-            href={`${process.env.NEXT_APP_APP_URL || ''}/login`}
-            _hover={{ hover: 'none' }}
-            _focus={{ outline: 'none' }}
-            rel="noreferrer"
-          >
-            <Button
-              py={2}
-              px={6}
-              rounded="lg"
-              variant="solid"
-              fontWeight={600}
-              _focus={{ outline: 'none' }}
-              colorScheme="brandPurple"
-              fontSize={{ base: 'sm', xl: 'sm' }}
-            >
-              Sign In
-            </Button>
-          </Link>
-          <Box mx={4} />
-          <Link
-            href={`${process.env.NEXT_APP_APP_URL || ''}/register`}
-            _hover={{ hover: 'none' }}
-            _focus={{ outline: 'none' }}
-            rel="noreferrer"
-          >
-            <Button
-              py={2}
-              px={6}
-              rounded="lg"
-              variant="outline"
-              fontWeight={600}
-              borderWidth={2}
-              _focus={{ outline: 'none' }}
-              colorScheme="brandPurple"
-              fontSize={{ base: 'sm', xl: 'sm' }}
-            >
-              Sign Up
-            </Button>
-          </Link>
-        </Flex> */}
       </Container>
     </Flex>
   )

@@ -29,8 +29,8 @@ const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
             fontSize={{ base: 'sm', xl: 'xl' }}
             lineHeight={{ base: '24px', xl: '160%' }}
           >
-            UK's first live database of Carers available for hire by companies
-            and individuals.
+            We help you recruit international visa-ready Nurses and Carers for
+            your Care Home, Hospital or Home Care needs.
           </Text>
         </Box>
 
@@ -41,16 +41,16 @@ const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
             _hover={{ outline: 'none' }}
           >
             <Button
-              py={{ base: 6, xl: 8 }}
-              px={{ base: 4, xl: 10 }}
-              rounded={{ base: 'md', xl: 'xl' }}
+              w="30%"
               variant="solid"
               fontWeight={600}
-              _focus={{ outline: 'none' }}
+              py={{ base: 6, xl: 8 }}
               colorScheme="brandPurple"
+              _focus={{ outline: 'none' }}
+              rounded={{ base: 'md', xl: 'xl' }}
               fontSize={{ base: 'sm', xl: 'xl' }}
             >
-              Join our waiting list
+              Apply
             </Button>
           </Link>
         </Box>

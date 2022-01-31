@@ -5,20 +5,20 @@ import Card from './Card'
 const YourProblems: FC = () => {
   const problems = [
     {
-      title: 'Lack of Staff',
-      text: 'Are you facing staff shortages due to Covid-19, Brexit and changing regulations?'
+      title: '1. International Candidate Sourcing',
+      text: 'HeroCare sources internationally qualified Nurses and Carers for UK Care Homes and Hospitals of any size, through our partner offices. We have both recruitment and medical experience on our team, so you can trust us to source the most suited candidates for your needs.'
     },
     {
-      title: 'Lengthy time-to-hire',
-      text: 'Are your job boards and agencies taking too long to find suitable candidates?'
+      title: '2. International Candidate Screening',
+      text: 'We pre-screen, background check and interview Nurses and train Carers before we introduce them to your organisation. Our medical team ensure candidates have the qualifications and language certifications to settle and register in the UK.'
     },
     {
-      title: 'High recruitment fees',
-      text: 'Are you over-spending on recruitment fees? No one should be forced to pay huge fees such as 30% per hire.'
+      title: '3. International Candidate Placing',
+      text: 'HeroCare supports international candidates with their visa applications, flight bookings and settling into UK so all you have to worry about is a warm welcome and subsequent training.'
     },
     {
-      title: 'Lack of transparency & excessive administration',
-      text: 'We know that back and forth communication with recruiters can be unclear and overwhelming.'
+      title: '4. Local Recruitment',
+      text: 'We can also help you recruit UK Nurses and Carers, who are ready to work on a permanent or temporary basis.'
     }
   ]
 
@@ -43,8 +43,8 @@ const YourProblems: FC = () => {
       </Box>
       <Flex
         align="end"
-        h={{ xl: 120 }}
-        pl={{ xl: 24 }}
+        h={{ xl: 123 }}
+        px={{ xl: 10 }}
         bgColor="brand.bgColor.200"
         w={{ base: 'full', xl: '90%' }}
         borderRadius="0px 400px 0px 0px"

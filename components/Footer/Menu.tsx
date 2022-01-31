@@ -23,6 +23,7 @@ const Menu: FC<IProps> = ({ title, links }) => {
           <NextLink key={i} href={e.link} passHref>
             <Link
               py={2}
+              w="max-content"
               lineHeight="24px"
               _focus={{ outline: 'none' }}
               _hover={{ outline: 'none' }}

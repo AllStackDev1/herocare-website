@@ -32,11 +32,10 @@ const Card: FC<IProps> = ({ title, text }) => {
       <Box mt={{ base: 2, xl: 4 }}>
         <Text
           color="gray.600"
-          fontSize={{ base: 'md', xl: 'lg' }}
+          fontSize={{ base: 'sm', xl: 'md' }}
           lineHeight={{ xl: '28px' }}
-        >
-          {text}
-        </Text>
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
       </Box>
     </GridItem>
   )
