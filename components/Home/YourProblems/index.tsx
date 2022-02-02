@@ -5,19 +5,19 @@ import Card from './Card'
 const YourProblems: FC = () => {
   const problems = [
     {
-      title: '1. International Candidate Sourcing',
+      title: '(1) International Candidate Sourcing',
       text: 'HeroCare sources internationally qualified Nurses and Carers for UK Care Homes and Hospitals of any size, through our partner offices. We have both recruitment and medical experience on our team, so you can trust us to source the most suited candidates for your needs.'
     },
     {
-      title: '2. International Candidate Screening',
+      title: '(2) International Candidate Screening',
       text: 'We pre-screen, background check and interview Nurses and train Carers before we introduce them to your organisation. Our medical team ensure candidates have the qualifications and language certifications to settle and register in the UK.'
     },
     {
-      title: '3. International Candidate Placing',
+      title: '(3) International Candidate Placing',
       text: 'HeroCare supports international candidates with their visa applications, flight bookings and settling into UK so all you have to worry about is a warm welcome and subsequent training.'
     },
     {
-      title: '4. Local Recruitment',
+      title: '(4) Local Recruitment',
       text: 'We can also help you recruit UK Nurses and Carers, who are ready to work on a permanent or temporary basis.'
     }
   ]
@@ -38,7 +38,7 @@ const YourProblems: FC = () => {
         py={{ base: 5, xl: 0 }}
       >
         <Heading fontWeight={400} fontSize={{ base: '3xl', xl: '5xl' }}>
-          We understand your problems
+          Our healthcare recruitment solutions
         </Heading>
       </Box>
       <Flex

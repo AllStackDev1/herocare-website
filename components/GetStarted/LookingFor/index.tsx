@@ -7,14 +7,17 @@ const LookingFor: FC = () => {
     {
       title: '1. You are a Nurse',
       text: `
-        -You trained outside the UK, but you want to work in the UK. <br />                                                                                                                                                                  -You are eligible to register with the UK Nursing and Midwifery Council                                                                                                   
-        -You trained in the UK, but you need a sponsor licence <br />                                                     
-        -You are willing to work in a Care Home
+        -You trained outside the UK, but you want to work in the UK. <br />                                                                                                                                                                  
+        -You are eligible to register with the UK Nursing and Midwifery Council. <br />                                                                                                
+        -You trained in the UK, but you need a sponsor licence. <br />                                                     
+        -You are willing to work in a Care Home.
       `
     },
     {
       title: '2. You are a Nurse',
-      text: `-You must pass the IELTS speaking, listening, reading and writing exam with a score of 7.0 or above. The CBT and OSCE Nurse related exams will be taken in the UK.`
+      text: `
+        -You must pass the IELTS speaking, listening, reading and writing exam with a score of 7.0 or above. <br />         
+        -The CBT and OSCE Nurse related exams will be taken in the UK.`
     },
     {
       title: '3. You are a Nurse',
@@ -29,7 +32,7 @@ const LookingFor: FC = () => {
     },
     {
       title: '2. You are a Carer',
-      text: '-You must pass the IELTS speaking, reading, writing and writing exam with a score of 4.0 or above.'
+      text: 'You must pass the IELTS speaking, reading, writing and writing exam with a score of 4.0 or above.'
     },
     {
       title: '3. You are a Carer',

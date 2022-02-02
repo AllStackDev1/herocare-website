@@ -53,7 +53,7 @@ const Hero: FC<{ ctaLink: string }> = ({ ctaLink }) => {
               rounded={{ base: 'md', xl: 'xl' }}
               fontSize={{ base: 'sm', xl: 'xl' }}
             >
-              Apply
+              Recruit Now
             </Button>
           </Link>
         </Box>

@@ -20,7 +20,7 @@ const Card: FC<IProps> = ({ title, text }) => {
       textAlign="left"
       w={{ xl: 80 }}
     >
-      <Box>
+      <Box mb={3}>
         <Icon as={FolderIcon} boxSize={20} />
       </Box>
       <Heading fontSize="xl" fontWeight={400} lineHeight="30px">
