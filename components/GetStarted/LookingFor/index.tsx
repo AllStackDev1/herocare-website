@@ -5,7 +5,7 @@ import Card from './Card'
 const LookingFor: FC = () => {
   const data = [
     {
-      title: '1. You are a Nurse',
+      title: 'You are a Nurse (1);',
       text: `
         -You trained outside the UK, but you want to work in the UK. <br />                                                                                                                                                                  
         -You are eligible to register with the UK Nursing and Midwifery Council. <br />                                                                                                
@@ -14,28 +14,28 @@ const LookingFor: FC = () => {
       `
     },
     {
-      title: '2. You are a Nurse',
+      title: 'You are a Nurse (2);',
       text: `
         -You must pass the IELTS speaking, listening, reading and writing exam with a score of 7.0 or above. <br />         
         -The CBT and OSCE Nurse related exams will be taken in the UK.`
     },
     {
-      title: '3. You are a Nurse',
+      title: 'You are a Nurse (3);',
       text: `Pass the employer interview and complete the Health and Care Worker Visa application with a clean criminal background check and health assessment.`
     },
     {
-      title: '1. You are a Carer',
+      title: 'You are a Carer (1);',
       text: `
         -You have care experience and you want to start your career with a UK Care Home. <br />                                                                                                                                                      
         If you have no previous care experience you are welcome to apply. We will train you.
       `
     },
     {
-      title: '2. You are a Carer',
+      title: 'You are a Carer (2);',
       text: 'You must pass the IELTS speaking, reading, writing and writing exam with a score of 4.0 or above.'
     },
     {
-      title: '3. You are a Carer',
+      title: 'You are a Carer (3);',
       text: `From 15 February 2022, Care workers will be able to work in the UK via the Health and Care Worker Visa once they have obtained a certificate of sponsorship from an employer.`
     }
   ]

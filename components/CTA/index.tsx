@@ -2,7 +2,10 @@ import { FC } from 'react'
 import { Box, Link, Button, Heading, Container } from '@chakra-ui/react'
 import Art from './Art'
 
-const CTA: FC<{ ctaLink: string }> = ({ ctaLink }) => {
+const CTA: FC<{ ctaLink: string; title?: string }> = ({
+  ctaLink,
+  title = 'Recruit Now'
+}) => {
   return (
     <Box
       w="full"
@@ -44,7 +47,7 @@ const CTA: FC<{ ctaLink: string }> = ({ ctaLink }) => {
               rounded={{ base: 'md', xl: 'xl' }}
               fontSize={{ base: 'sm', xl: 'xl' }}
             >
-              Recruit Now
+              {title}
             </Button>
           </Link>
         </Box>

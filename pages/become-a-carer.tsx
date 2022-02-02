@@ -13,7 +13,10 @@ const GetStarted: NextPage = () => {
       {/* <Options /> */}
       <LookingFor />
       <HowItWorks />
-      <CTA ctaLink="https://ps7w173z49l.typeform.com/to/FZhbBtT1" />
+      <CTA
+        title="Apply"
+        ctaLink="https://ps7w173z49l.typeform.com/to/FZhbBtT1"
+      />
     </Layout>
   )
 }
